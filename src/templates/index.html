@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Classification</title>
+</head>
+<body>
+    <h1>Classify Email</h1>
+    <form method="POST">
+        <label>Subject:</label><br>
+        <input type="text" name="subject" /><br><br>
+        <label>Body:</label><br>
+        <textarea name="body"></textarea><br><br>
+        <button type="submit">Classify</button>
+    </form>
+    
+    {% if predicted_category and predicted_priority %}
+    <h2>Predicted Category: {{ predicted_category }}</h2>
+    <h2>Predicted Priority: {{ predicted_priority }}</h2>
+    
+    <h3>Was this correct?</h3>
+    <form action="/feedback" method="POST">
+        <input type="hidden" name="predicted_category" value="{{ predicted_category }}" />
+        <input type="hidden" name="predicted_priority" value="{{ predicted_priority }}" />
+        <input type="hidden" name="subject" value="{{ subject }}" />
+        <input type="hidden" name="body" value="{{ body }}" />
+        
+        <!-- Thumbs up or down -->
+        <button type="submit" name="user_feedback" value="up">👍</button>
+        <button type="submit" name="user_feedback" value="down">👎</button>
+        
+        <br><br>
+        <label>Correct Category:</label>
+        <select name="correct_category">
+            <option value="">--No Change--</option>
+            <option value="HR">HR</option>
+            <option value="Finance">Finance</option>
+            <option value="Support">Support</option>
+        </select>
+        
+        <label>Correct Priority:</label>
+        <select name="correct_priority">
+            <option value="">--No Change--</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+        
+        <button type="submit" name="user_feedback" value="correction">Submit Correction</button>
+    </form>
+    {% endif %}
+</body>
+</html>

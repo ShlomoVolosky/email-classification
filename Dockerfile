@@ -1,4 +1,7 @@
 # Dockerfile
+
+### BASIC EXAMPLE 
+
 FROM python:3.9-slim
 
 # Create working directory

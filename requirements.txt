@@ -1,0 +1,9 @@
+flask==2.2.3
+torch==1.13.1
+transformers==4.27.4
+datasets==2.10.1
+evaluate==0.4.0
+pandas==1.5.3
+scikit-learn==1.2.1
+nltk==3.8.1
+sqlite3-binary==0.0.1

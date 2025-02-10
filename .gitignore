@@ -3,6 +3,5 @@ __pycache__/
 env/
 venv/
 *.pyc
-model_output/
 *.sqlite
 feedback.db

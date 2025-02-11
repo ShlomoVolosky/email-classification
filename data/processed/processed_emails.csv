@@ -1,0 +1,7 @@
+subject_clean,body_clean,category_label,priority_label
+"meeting reminder","hi all we have a quarterly finance meeting tomorrow",0,2
+"new job opening","we have a new position open in the marketing department",1,1
+"laptop wont start","my laptop wont power on this morning please advise",2,2
+"personal leave request","i need 2 days off next week for personal reasons",1,0
+"budget overview","please find attached the q1 budget overview for review",0,1
+"password reset","im locked out of my email account kindly assist",2,2
